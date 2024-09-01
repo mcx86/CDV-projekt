@@ -1,1 +1,1 @@
-#Projekt zaliczeniowy Akademia Pythona 2023/2024 Collegium Da Vinci
+# Projekt zaliczeniowy Akademia Pythona 2023/2024 Collegium Da Vinci
