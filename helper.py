@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 
 
 def get_sensors(wybor_zrodla,station_id,error_message):
+    """Metoda pomocnicza do wyswietlania dostepnych czujnikow dla danej stacji"""
     sensory_slownik = {}
     try:
         if wybor_zrodla == 'API':
@@ -23,6 +24,7 @@ def get_sensors(wybor_zrodla,station_id,error_message):
         error_message.object = f'Status:<div style="color: red;font-weight: bold;">Error occured: {e}</div>'
 
 def get_sensor_details(wybor_zrodla,sensor_id,place,error_message):
+    """Metoda pomocnicza do wyswietlania ostatnich danych dla danego czujnika"""
     try:
         place.clear()
         if wybor_zrodla == 'API':
@@ -41,6 +43,7 @@ def get_sensor_details(wybor_zrodla,sensor_id,place,error_message):
         error_message.object = f'Status:<div style="color: red;font-weight: bold;">Error occured: {e}</div>'
 
 def sensor_to_dataframe(wybor_zrodla,sensor_id, error_message):
+    """Metoda pomocnicza do przeksztalcania danych z API/bazy na dataframe"""
     try:
         if wybor_zrodla == 'API':
             sensor = api.get_sensor(sensor_id=sensor_id)
@@ -63,6 +66,7 @@ def sensor_to_dataframe(wybor_zrodla,sensor_id, error_message):
         error_message.object = f'Status:<div style="color: red;font-weight: bold;">Error occured: {e}</div>'
 
 def draw_plot(df):
+    """Metoda pomocnicza do generowania wykresu na podstawie dataframe'u"""
     plt.figure(figsize=(10,4.3))
     plt.plot(df['Data'], df['Wartosc'],label=df['Sensor'][0])
     plt.xlabel('Data')
