@@ -23,7 +23,7 @@ def get_sensors(wybor_zrodla,station_id,error_message):
     except Exception as e:
         error_message.object = f'Status:<div style="color: red;font-weight: bold;">Error occured: {e}</div>'
 
-def get_sensor_details(wybor_zrodla,sensor_id,place,error_message):
+def get_sensor_details(wybor_zrodla,sensor_id,place,df,error_message):
     """Metoda pomocnicza do wyswietlania ostatnich danych dla danego czujnika"""
     try:
         place.clear()
@@ -31,12 +31,12 @@ def get_sensor_details(wybor_zrodla,sensor_id,place,error_message):
             sensor = api.get_sensor(sensor_id)
             place.append(pn.Row(f"Sensor: <b>{sensor['key']}</b>", styles=dict(background='WhiteSmoke')))
             place.append(pn.Row(f"Czas pomiaru: {str(sensor['values'][0]['date'])}"))
-            place.append(pn.Row(f"Wartość: {str(sensor['values'][0]['value'])}"))
+            place.append(pn.Row(f"Wartość: {str(sensor['values'][0]['value'])} | Wartość średnia: {df['Wartosc'].mean().round(2)}  | Wartość minimalna: {df['Wartosc'].min().round(2)}  | Wartość maksymalna: {df['Wartosc'].max().round(2)} "))
         else:
             sensordata = db.SensorData.select().where(db.SensorData.sensor_id==sensor_id).get()
             place.append(pn.Row(f"Sensor: <b>{sensordata.sensor_key}</b>", styles=dict(background='WhiteSmoke')))
             place.append(pn.Row(f"Czas pomiaru: {str(sensordata.sensor_date)}"))
-            place.append(pn.Row(f"Wartość: {str(sensordata.sensor_value)}"))
+            place.append(pn.Row(f"Wartość: {str(sensordata.sensor_value)} | Wartość średnia: {df['Wartosc'].mean().round(2)} | Wartość minimalna: {df['Wartosc'].min().round(2)} | Wartość maksymalna: {df['Wartosc'].max().round(2)}   "))
 
 
     except Exception as e:
@@ -77,5 +77,6 @@ def draw_plot(df):
     plt.tight_layout()
 
     return pn.pane.Matplotlib(plt.gcf(), tight=True)
+
 
 

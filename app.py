@@ -55,10 +55,9 @@ def update_panel_boczny(event):
 
 
 
-
 def get_sensor_details(event):
-    hp.get_sensor_details(wybor_zrodla.value,wybor_sensora.value,place=details,error_message=error_message)
-    df = hp.sensor_to_dataframe(wybor_zrodla.value,sensor_id=wybor_sensora.value,error_message=error_message)
+    df = hp.sensor_to_dataframe(wybor_zrodla.value, sensor_id=wybor_sensora.value, error_message=error_message)
+    hp.get_sensor_details(wybor_zrodla.value,wybor_sensora.value,place=details,df=df,error_message=error_message)
     details.append(hp.draw_plot(df=df))
 
 
