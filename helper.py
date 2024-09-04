@@ -30,12 +30,12 @@ def get_sensor_details(wybor_zrodla,sensor_id,place,df,error_message):
         if wybor_zrodla == 'API':
             sensor = api.get_sensor(sensor_id)
             place.append(pn.Row(f"Sensor: <b>{sensor['key']}</b>", styles=dict(background='WhiteSmoke')))
-            place.append(pn.Row(f"Czas pomiaru: {str(sensor['values'][0]['date'])}"))
+            place.append(pn.Row(f"Najnowszy czas pomiaru z API: {str(sensor['values'][0]['date'])}"))
             place.append(pn.Row(f"Wartość: {str(sensor['values'][0]['value'])} | Wartość średnia: {df['Wartosc'].mean().round(2)}  | Wartość minimalna: {df['Wartosc'].min().round(2)}  | Wartość maksymalna: {df['Wartosc'].max().round(2)} "))
         else:
             sensordata = db.SensorData.select().where(db.SensorData.sensor_id==sensor_id).get()
             place.append(pn.Row(f"Sensor: <b>{sensordata.sensor_key}</b>", styles=dict(background='WhiteSmoke')))
-            place.append(pn.Row(f"Czas pomiaru: {str(sensordata.sensor_date)}"))
+            place.append(pn.Row(f"Najnowszy czas pomiaru w bazie: {str(sensordata.sensor_date)}"))
             place.append(pn.Row(f"Wartość: {str(sensordata.sensor_value)} | Wartość średnia: {df['Wartosc'].mean().round(2)} | Wartość minimalna: {df['Wartosc'].min().round(2)} | Wartość maksymalna: {df['Wartosc'].max().round(2)}   "))
 
 

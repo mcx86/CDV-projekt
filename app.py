@@ -94,7 +94,7 @@ button_pokaz_stacje.on_click(set_czujniki)
 
 
 
-template = pn.template.FastGridTemplate(site="CDV", title="Jakosc powietrza w Polsce",sidebar=[wybor_zrodla,button_pokaz_stacje,input,button_szukaj,panel_boczny], prevent_collision=True)
+template = pn.template.FastGridTemplate(site="CDV", title="Jakość powietrza w Polsce",sidebar=[wybor_zrodla,button_pokaz_stacje,input,button_szukaj,panel_boczny], prevent_collision=True)
 template.main[0:4,0:5] = folium_pane
 template.main[0:6,5:12] = details
 template.main[4:6,0:5] = error_message
