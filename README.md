@@ -8,3 +8,7 @@ Stack:
 * Pandas
 * Database - Sqlite
 * ORRM Peewee (http://docs.peewee-orm.com/en/latest/)
+
+UWAGI:
+1. Aby uruchomić aplikację należy wywołać polecenie: `panel serve app.py` (wersja minimalna). Aplikację można wywołać także z przełącznikami --autoreload (automatyczne odświeżenie aplikacji po wprowadzeniu zmian) 
+i/lub --show (automatyczne otwarcie aplikacji w domyślnej przegądarce), np. `panel serve app.py --autoreload --show`
