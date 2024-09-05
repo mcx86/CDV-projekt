@@ -73,7 +73,7 @@ def draw_plot(df):
     plt.ylabel('Wartosc')
     plt.title(df['Sensor'][0])
     plt.legend()
-    plt.xticks(rotation=45)
+    plt.xticks(rotation=90)
     plt.tight_layout()
 
     return pn.pane.Matplotlib(plt.gcf(), tight=True)

@@ -1,0 +1,517 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module db</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>db</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmike%5Cpycharmprojects%5Czaliczenie_final%5Cdb.py">c:\users\mike\pycharmprojects\zaliczenie_final\db.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="peewee.html#Model">peewee.Model</a>(peewee._metaclass_helper_)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="db.html#Sensor">Sensor</a>
+</font></dt><dt><font face="helvetica, arial"><a href="db.html#SensorData">SensorData</a>
+</font></dt><dt><font face="helvetica, arial"><a href="db.html#Station">Station</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Sensor">class <strong>Sensor</strong></a>(<a href="peewee.html#Model">peewee.Model</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Sensor">Sensor</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+Klasa&nbsp;<a href="#Sensor">Sensor</a>&nbsp;służąca&nbsp;do&nbsp;zamodelowania&nbsp;w&nbsp;bazie&nbsp;danych&nbsp;tabeli&nbsp;<a href="#Sensor">Sensor</a>.&nbsp;Tabela&nbsp;zawiera&nbsp;informacje&nbsp;o&nbsp;czujnikach&nbsp;wchodzących&nbsp;w&nbsp;skład&nbsp;stacji<br>
+obslugiwanych&nbsp;przez&nbsp;API&nbsp;GIOŚ<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="db.html#Sensor">Sensor</a></dd>
+<dd><a href="peewee.html#Model">peewee.Model</a></dd>
+<dd>peewee._metaclass_helper_</dd>
+<dd><a href="peewee.html#Node">peewee.Node</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><strong>__repr__</strong> <em>lambda</em> self</dt></dl>
+
+<strong>sensordata_set</strong> = &lt;peewee.BackrefAccessor object&gt;
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DoesNotExist</strong> = &lt;class 'db.SensorDoesNotExist'&gt;</dl>
+
+<dl><dt><strong>__data__</strong> = None</dl>
+
+<dl><dt><strong>__rel__</strong> = None</dl>
+
+<dl><dt><strong>id</strong> = &lt;AutoField: Sensor.id&gt;</dl>
+
+<dl><dt><strong>sensor_id</strong> = &lt;CharField: Sensor.sensor_id&gt;</dl>
+
+<dl><dt><strong>sensor_param</strong> = &lt;CharField: Sensor.sensor_param&gt;</dl>
+
+<dl><dt><strong>station_id</strong> = &lt;ForeignKeyField: Sensor.station_id&gt;</dl>
+
+<dl><dt><strong>station_id_id</strong> = &lt;ForeignKeyField: Sensor.station_id&gt;</dl>
+
+<hr>
+Methods inherited from <a href="peewee.html#Model">peewee.Model</a>:<br>
+<dl><dt><a name="Sensor-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="Sensor-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="Sensor-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Sensor-__ne__"><strong>__ne__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self!=value.</tt></dd></dl>
+
+<dl><dt><a name="Sensor-__sql__"><strong>__sql__</strong></a>(self, ctx)</dt></dl>
+
+<dl><dt><a name="Sensor-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<dl><dt><a name="Sensor-delete_instance"><strong>delete_instance</strong></a>(self, recursive=False, delete_nullable=False)</dt></dl>
+
+<dl><dt><a name="Sensor-dependencies"><strong>dependencies</strong></a>(self, search_nullable=True)</dt></dl>
+
+<dl><dt><a name="Sensor-get_id"><strong>get_id</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sensor-is_dirty"><strong>is_dirty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sensor-save"><strong>save</strong></a>(self, force_insert=False, only=None)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="peewee.html#Model">peewee.Model</a>:<br>
+<dl><dt><a name="Sensor-add_index"><strong>add_index</strong></a>(*fields, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-alias"><strong>alias</strong></a>(alias=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-bind"><strong>bind</strong></a>(database, bind_refs=True, bind_backrefs=True, _exclude=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-bind_ctx"><strong>bind_ctx</strong></a>(database, bind_refs=True, bind_backrefs=True)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-bulk_create"><strong>bulk_create</strong></a>(model_list, batch_size=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-bulk_update"><strong>bulk_update</strong></a>(model_list, fields, batch_size=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-create"><strong>create</strong></a>(**query)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-create_table"><strong>create_table</strong></a>(safe=True, **options)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-delete"><strong>delete</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-delete_by_id"><strong>delete_by_id</strong></a>(pk)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-drop_table"><strong>drop_table</strong></a>(safe=True, drop_sequences=True, **options)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-filter"><strong>filter</strong></a>(*dq_nodes, **filters)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-get"><strong>get</strong></a>(*query, **filters)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-get_by_id"><strong>get_by_id</strong></a>(pk)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-get_or_create"><strong>get_or_create</strong></a>(**kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-get_or_none"><strong>get_or_none</strong></a>(*query, **filters)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-index"><strong>index</strong></a>(*fields, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-insert"><strong>insert</strong></a>(_Model__data=None, **insert)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-insert_from"><strong>insert_from</strong></a>(query, fields)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-insert_many"><strong>insert_many</strong></a>(rows, fields=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-noop"><strong>noop</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-raw"><strong>raw</strong></a>(sql, *params)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-replace"><strong>replace</strong></a>(_Model__data=None, **insert)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-replace_many"><strong>replace_many</strong></a>(rows, fields=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-select"><strong>select</strong></a>(*fields)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-set_by_id"><strong>set_by_id</strong></a>(key, value)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-table_exists"><strong>table_exists</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-truncate_table"><strong>truncate_table</strong></a>(**options)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-update"><strong>update</strong></a>(_Model__data=None, **update)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Sensor-validate_model"><strong>validate_model</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<hr>
+Readonly properties inherited from <a href="peewee.html#Model">peewee.Model</a>:<br>
+<dl><dt><strong>dirty_fields</strong></dt>
+</dl>
+<hr>
+Methods inherited from <a href="peewee.html#Node">peewee.Node</a>:<br>
+<dl><dt><a name="Sensor-clone"><strong>clone</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sensor-coerce"><strong>coerce</strong></a>(self, _coerce=True)</dt></dl>
+
+<dl><dt><a name="Sensor-is_alias"><strong>is_alias</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Sensor-unwrap"><strong>unwrap</strong></a>(self)</dt></dl>
+
+<hr>
+Static methods inherited from <a href="peewee.html#Node">peewee.Node</a>:<br>
+<dl><dt><a name="Sensor-copy"><strong>copy</strong></a>(method)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="peewee.html#Node">peewee.Node</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="peewee.html#Node">peewee.Node</a>:<br>
+<dl><dt><strong>__isabstractmethod__</strong> = False</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SensorData">class <strong>SensorData</strong></a>(<a href="peewee.html#Model">peewee.Model</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#SensorData">SensorData</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+Klasa&nbsp;<a href="#SensorData">SensorData</a>&nbsp;służąca&nbsp;do&nbsp;zamodelowania&nbsp;w&nbsp;bazie&nbsp;danych&nbsp;tabeli&nbsp;<a href="#SensorData">SensorData</a>.&nbsp;Tabela&nbsp;zawiera&nbsp;dane&nbsp;pochodzące&nbsp;z&nbsp;czujników<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="db.html#SensorData">SensorData</a></dd>
+<dd><a href="peewee.html#Model">peewee.Model</a></dd>
+<dd>peewee._metaclass_helper_</dd>
+<dd><a href="peewee.html#Node">peewee.Node</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><strong>__repr__</strong> <em>lambda</em> self</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DoesNotExist</strong> = &lt;class 'db.SensorDataDoesNotExist'&gt;</dl>
+
+<dl><dt><strong>__data__</strong> = None</dl>
+
+<dl><dt><strong>__rel__</strong> = None</dl>
+
+<dl><dt><strong>id</strong> = &lt;AutoField: SensorData.id&gt;</dl>
+
+<dl><dt><strong>sensor_date</strong> = &lt;CharField: SensorData.sensor_date&gt;</dl>
+
+<dl><dt><strong>sensor_id</strong> = &lt;ForeignKeyField: SensorData.sensor_id&gt;</dl>
+
+<dl><dt><strong>sensor_id_id</strong> = &lt;ForeignKeyField: SensorData.sensor_id&gt;</dl>
+
+<dl><dt><strong>sensor_key</strong> = &lt;CharField: SensorData.sensor_key&gt;</dl>
+
+<dl><dt><strong>sensor_value</strong> = &lt;CharField: SensorData.sensor_value&gt;</dl>
+
+<hr>
+Methods inherited from <a href="peewee.html#Model">peewee.Model</a>:<br>
+<dl><dt><a name="SensorData-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="SensorData-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="SensorData-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="SensorData-__ne__"><strong>__ne__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self!=value.</tt></dd></dl>
+
+<dl><dt><a name="SensorData-__sql__"><strong>__sql__</strong></a>(self, ctx)</dt></dl>
+
+<dl><dt><a name="SensorData-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<dl><dt><a name="SensorData-delete_instance"><strong>delete_instance</strong></a>(self, recursive=False, delete_nullable=False)</dt></dl>
+
+<dl><dt><a name="SensorData-dependencies"><strong>dependencies</strong></a>(self, search_nullable=True)</dt></dl>
+
+<dl><dt><a name="SensorData-get_id"><strong>get_id</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SensorData-is_dirty"><strong>is_dirty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SensorData-save"><strong>save</strong></a>(self, force_insert=False, only=None)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="peewee.html#Model">peewee.Model</a>:<br>
+<dl><dt><a name="SensorData-add_index"><strong>add_index</strong></a>(*fields, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-alias"><strong>alias</strong></a>(alias=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-bind"><strong>bind</strong></a>(database, bind_refs=True, bind_backrefs=True, _exclude=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-bind_ctx"><strong>bind_ctx</strong></a>(database, bind_refs=True, bind_backrefs=True)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-bulk_create"><strong>bulk_create</strong></a>(model_list, batch_size=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-bulk_update"><strong>bulk_update</strong></a>(model_list, fields, batch_size=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-create"><strong>create</strong></a>(**query)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-create_table"><strong>create_table</strong></a>(safe=True, **options)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-delete"><strong>delete</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-delete_by_id"><strong>delete_by_id</strong></a>(pk)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-drop_table"><strong>drop_table</strong></a>(safe=True, drop_sequences=True, **options)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-filter"><strong>filter</strong></a>(*dq_nodes, **filters)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-get"><strong>get</strong></a>(*query, **filters)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-get_by_id"><strong>get_by_id</strong></a>(pk)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-get_or_create"><strong>get_or_create</strong></a>(**kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-get_or_none"><strong>get_or_none</strong></a>(*query, **filters)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-index"><strong>index</strong></a>(*fields, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-insert"><strong>insert</strong></a>(_Model__data=None, **insert)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-insert_from"><strong>insert_from</strong></a>(query, fields)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-insert_many"><strong>insert_many</strong></a>(rows, fields=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-noop"><strong>noop</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-raw"><strong>raw</strong></a>(sql, *params)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-replace"><strong>replace</strong></a>(_Model__data=None, **insert)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-replace_many"><strong>replace_many</strong></a>(rows, fields=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-select"><strong>select</strong></a>(*fields)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-set_by_id"><strong>set_by_id</strong></a>(key, value)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-table_exists"><strong>table_exists</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-truncate_table"><strong>truncate_table</strong></a>(**options)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-update"><strong>update</strong></a>(_Model__data=None, **update)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="SensorData-validate_model"><strong>validate_model</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<hr>
+Readonly properties inherited from <a href="peewee.html#Model">peewee.Model</a>:<br>
+<dl><dt><strong>dirty_fields</strong></dt>
+</dl>
+<hr>
+Methods inherited from <a href="peewee.html#Node">peewee.Node</a>:<br>
+<dl><dt><a name="SensorData-clone"><strong>clone</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SensorData-coerce"><strong>coerce</strong></a>(self, _coerce=True)</dt></dl>
+
+<dl><dt><a name="SensorData-is_alias"><strong>is_alias</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="SensorData-unwrap"><strong>unwrap</strong></a>(self)</dt></dl>
+
+<hr>
+Static methods inherited from <a href="peewee.html#Node">peewee.Node</a>:<br>
+<dl><dt><a name="SensorData-copy"><strong>copy</strong></a>(method)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="peewee.html#Node">peewee.Node</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="peewee.html#Node">peewee.Node</a>:<br>
+<dl><dt><strong>__isabstractmethod__</strong> = False</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Station">class <strong>Station</strong></a>(<a href="peewee.html#Model">peewee.Model</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Station">Station</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+Klasa&nbsp;<a href="#Station">Station</a>&nbsp;służąca&nbsp;do&nbsp;zamodelowania&nbsp;w&nbsp;bazie&nbsp;danych&nbsp;tabeli&nbsp;<a href="#Station">Station</a>.&nbsp;Tabela&nbsp;zawiera&nbsp;informacje&nbsp;o&nbsp;stacjach&nbsp;obslugiwanych&nbsp;przez&nbsp;API&nbsp;GIOŚ<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="db.html#Station">Station</a></dd>
+<dd><a href="peewee.html#Model">peewee.Model</a></dd>
+<dd>peewee._metaclass_helper_</dd>
+<dd><a href="peewee.html#Node">peewee.Node</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><strong>__repr__</strong> <em>lambda</em> self</dt></dl>
+
+<strong>sensor_set</strong> = &lt;peewee.BackrefAccessor object&gt;
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DoesNotExist</strong> = &lt;class 'db.StationDoesNotExist'&gt;</dl>
+
+<dl><dt><strong>__data__</strong> = None</dl>
+
+<dl><dt><strong>__rel__</strong> = None</dl>
+
+<dl><dt><strong>gegr_lat</strong> = &lt;FloatField: Station.gegr_lat&gt;</dl>
+
+<dl><dt><strong>gegr_lon</strong> = &lt;FloatField: Station.gegr_lon&gt;</dl>
+
+<dl><dt><strong>id</strong> = &lt;AutoField: Station.id&gt;</dl>
+
+<dl><dt><strong>station_id</strong> = &lt;CharField: Station.station_id&gt;</dl>
+
+<dl><dt><strong>station_name</strong> = &lt;CharField: Station.station_name&gt;</dl>
+
+<hr>
+Methods inherited from <a href="peewee.html#Model">peewee.Model</a>:<br>
+<dl><dt><a name="Station-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="Station-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="Station-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Station-__ne__"><strong>__ne__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self!=value.</tt></dd></dl>
+
+<dl><dt><a name="Station-__sql__"><strong>__sql__</strong></a>(self, ctx)</dt></dl>
+
+<dl><dt><a name="Station-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<dl><dt><a name="Station-delete_instance"><strong>delete_instance</strong></a>(self, recursive=False, delete_nullable=False)</dt></dl>
+
+<dl><dt><a name="Station-dependencies"><strong>dependencies</strong></a>(self, search_nullable=True)</dt></dl>
+
+<dl><dt><a name="Station-get_id"><strong>get_id</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Station-is_dirty"><strong>is_dirty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Station-save"><strong>save</strong></a>(self, force_insert=False, only=None)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="peewee.html#Model">peewee.Model</a>:<br>
+<dl><dt><a name="Station-add_index"><strong>add_index</strong></a>(*fields, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-alias"><strong>alias</strong></a>(alias=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-bind"><strong>bind</strong></a>(database, bind_refs=True, bind_backrefs=True, _exclude=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-bind_ctx"><strong>bind_ctx</strong></a>(database, bind_refs=True, bind_backrefs=True)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-bulk_create"><strong>bulk_create</strong></a>(model_list, batch_size=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-bulk_update"><strong>bulk_update</strong></a>(model_list, fields, batch_size=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-create"><strong>create</strong></a>(**query)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-create_table"><strong>create_table</strong></a>(safe=True, **options)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-delete"><strong>delete</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-delete_by_id"><strong>delete_by_id</strong></a>(pk)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-drop_table"><strong>drop_table</strong></a>(safe=True, drop_sequences=True, **options)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-filter"><strong>filter</strong></a>(*dq_nodes, **filters)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-get"><strong>get</strong></a>(*query, **filters)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-get_by_id"><strong>get_by_id</strong></a>(pk)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-get_or_create"><strong>get_or_create</strong></a>(**kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-get_or_none"><strong>get_or_none</strong></a>(*query, **filters)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-index"><strong>index</strong></a>(*fields, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-insert"><strong>insert</strong></a>(_Model__data=None, **insert)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-insert_from"><strong>insert_from</strong></a>(query, fields)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-insert_many"><strong>insert_many</strong></a>(rows, fields=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-noop"><strong>noop</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-raw"><strong>raw</strong></a>(sql, *params)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-replace"><strong>replace</strong></a>(_Model__data=None, **insert)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-replace_many"><strong>replace_many</strong></a>(rows, fields=None)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-select"><strong>select</strong></a>(*fields)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-set_by_id"><strong>set_by_id</strong></a>(key, value)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-table_exists"><strong>table_exists</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-truncate_table"><strong>truncate_table</strong></a>(**options)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-update"><strong>update</strong></a>(_Model__data=None, **update)<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<dl><dt><a name="Station-validate_model"><strong>validate_model</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="peewee.html#ModelBase">peewee.ModelBase</a></font></font></dt></dl>
+
+<hr>
+Readonly properties inherited from <a href="peewee.html#Model">peewee.Model</a>:<br>
+<dl><dt><strong>dirty_fields</strong></dt>
+</dl>
+<hr>
+Methods inherited from <a href="peewee.html#Node">peewee.Node</a>:<br>
+<dl><dt><a name="Station-clone"><strong>clone</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Station-coerce"><strong>coerce</strong></a>(self, _coerce=True)</dt></dl>
+
+<dl><dt><a name="Station-is_alias"><strong>is_alias</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Station-unwrap"><strong>unwrap</strong></a>(self)</dt></dl>
+
+<hr>
+Static methods inherited from <a href="peewee.html#Node">peewee.Node</a>:<br>
+<dl><dt><a name="Station-copy"><strong>copy</strong></a>(method)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="peewee.html#Node">peewee.Node</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="peewee.html#Node">peewee.Node</a>:<br>
+<dl><dt><strong>__isabstractmethod__</strong> = False</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>DJANGO_MAP</strong> = {'eq': &lt;built-in function eq&gt;, 'lt': &lt;built-in f...gexp': &lt;function &lt;lambda&gt; at 0x000000634E427400&gt;}<br>
+<strong>EXCLUDED</strong> = &lt;peewee._Namespace object&gt;<br>
+<strong>JOIN</strong> = {'INNER': 'INNER JOIN', 'LEFT_OUTER': 'LEFT OUTE...: 'LATERAL', 'LEFT_LATERAL': 'LEFT JOIN LATERAL'}<br>
+<strong>OP</strong> = {'AND': 'AND', 'OR': 'OR', 'ADD': '+', 'SUB': '-...REGEXP', 'CONCAT': '||', 'BITWISE_NEGATION': '~'}<br>
+<strong>PREFETCH_TYPE</strong> = {'WHERE': 1, 'JOIN': 2}<br>
+<strong>database</strong> = &lt;peewee.SqliteDatabase object&gt;<br>
+<strong>fn</strong> = &lt;peewee.Function object&gt;</td></tr></table>
+</body></html>
