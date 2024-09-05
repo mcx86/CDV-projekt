@@ -7,8 +7,12 @@ Stack:
 * Panel (https://panel.holoviz.org/)
 * Pandas
 * Database - Sqlite
-* ORRM Peewee (http://docs.peewee-orm.com/en/latest/)
+* ORM Peewee (http://docs.peewee-orm.com/en/latest/)
 
 UWAGI:
-1. Aby uruchomić aplikację należy wywołać polecenie: `panel serve app.py` (wersja minimalna). Aplikację można wywołać także z przełącznikami --autoreload (automatyczne odświeżenie aplikacji po wprowadzeniu zmian) 
+1. Aby uruchomić aplikację należy wykonać polecenie: `panel serve app.py` (wersja minimalna). Aplikację można wywołać także z przełącznikami --autoreload (automatyczne odświeżenie aplikacji po wprowadzeniu zmian) 
 i/lub --show (automatyczne otwarcie aplikacji w domyślnej przegądarce), np. `panel serve app.py --autoreload --show`
+
+2. Aby uruchomić testy należy wykonać polecenie: `pytest`
+
+Polecenia z punktów 1 i 2 należy wykonywać będąc w katalogu głównym aplikacji.
