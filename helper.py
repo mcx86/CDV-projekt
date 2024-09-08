@@ -76,6 +76,8 @@ def draw_plot(df):
     plt.xticks(rotation=90)
     plt.tight_layout()
 
+
+
     return pn.pane.Matplotlib(plt.gcf(), tight=True)
 
 

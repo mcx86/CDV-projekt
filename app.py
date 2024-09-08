@@ -30,8 +30,8 @@ input = pn.widgets.TextInput(name='Podaj ID stacji', placeholder='Podaj ID stacj
 wybor_zrodla = pn.widgets.RadioBoxGroup(name='Data Source', options=['API','DB'],inline=True)
 id_czujnik = pn.widgets.TextInput(name='A widget', value='A string')
 button_szukaj = pn.widgets.Button(name='Szukaj', disabled=False)
-button_sensor_szczegoly = pn.widgets.Button(name='Sensor szczegoly', disabled=False)
-button_pokaz_stacje = pn.widgets.Button(name='Pokaz stacje', disabled=False)
+button_sensor_szczegoly = pn.widgets.Button(name='Sensor szczegóły', disabled=False)
+button_pokaz_stacje = pn.widgets.Button(name='Pokaż stacje', disabled=False)
 panel_boczny = pn.Column()
 details = pn.Column()
 
@@ -47,7 +47,7 @@ def update_panel_boczny(event):
 
 
     sensory = hp.get_sensors(wybor_zrodla.value,station_id=station_id,error_message=error_message)
-    wybor_sensora = pn.widgets.Select(name='Dostepne sensory', options=sensory)
+    wybor_sensora = pn.widgets.Select(name='Dostępne sensory', options=sensory)
     panel_boczny.append(wybor_sensora)
     panel_boczny.append(button_sensor_szczegoly)
 
