@@ -15,4 +15,9 @@ i/lub --show (automatyczne otwarcie aplikacji w domyślnej przegądarce), np. `p
 
 2. Aby uruchomić testy należy wykonać polecenie: `pytest`
 
+3. Aby odświeżyć bazę danych należy uruchomić skrypt `load_data_sync.py`. Skrypt ten usuwa wszystkie dotychczasowe dane z tabeli i ładuje najnowsze.
+
 Polecenia z punktów 1 i 2 należy wykonywać będąc w katalogu głównym aplikacji.
+
+
+Live demo dostępne pod adresem: https://delicate-cherry-8738.ploomberapp.io
