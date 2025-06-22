@@ -20,4 +20,4 @@ i/lub --show (automatyczne otwarcie aplikacji w domyślnej przegądarce), np. `p
 Polecenia z punktów 1 i 2 należy wykonywać będąc w katalogu głównym aplikacji.
 
 
-Live demo dostępne pod adresem: https://delicate-cherry-8738.ploomberapp.io
+Live demo dostępne pod adresem: ~~https://delicate-cherry-8738.ploomberapp.io~~ https://round-scene-2657.ploomber.app/app
